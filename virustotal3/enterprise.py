@@ -53,8 +53,7 @@ def search(api_key, query, order=None, limit=None, cursor=None,
                   'cursor': cursor, 'descriptors_only': descriptors_only}
         response = requests.get('https://www.virustotal.com/api/v3/intelligence/search',
                                 params=params,
-                                headers={'x-apikey': api_key,
-                                         'Accept': 'application/json'},
+                                headers={'x-apikey': api_key, 'Accept': 'application/json'},
                                 proxies=proxies,
                                 timeout=timeout)
 
@@ -214,7 +213,7 @@ class Livehunt:
         """
         try:
             response = requests.post(self.base_url + '/hunting_rulesets',
-                                     data=json.dumps(data),
+                                     data=data,
                                      headers=self.headers,
                                      proxies=self.proxies,
                                      timeout=timeout)
