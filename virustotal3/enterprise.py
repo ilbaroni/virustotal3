@@ -202,7 +202,7 @@ class Livehunt:
             print(error)
             exit(1)
 
-    def create_rulset(self, data, timeout=None):
+    def create_ruleset(self, data, timeout=None):
         """ Create a Livehunt ruleset
 
         Parameters:
