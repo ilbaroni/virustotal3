@@ -213,7 +213,7 @@ class Livehunt:
         """
         try:
             response = requests.post(self.base_url + '/hunting_rulesets',
-                                     data=data,
+                                     json=data,
                                      headers=self.headers,
                                      proxies=self.proxies,
                                      timeout=timeout)
@@ -242,7 +242,7 @@ class Livehunt:
         """
         try:
             response = requests.patch(self.base_url + '/hunting_rulesets/{}'.format(ruleset_id),
-                                      data=json.dumps(data),
+                                      json=data,
                                       headers=self.headers,
                                       proxies=self.proxies,
                                       timeout=timeout)
@@ -474,7 +474,7 @@ class Retrohunt:
         """
         try:
             response = requests.post(self.base_url + '/Retrohunt_jobs',
-                                     data=json.dumps(data),
+                                     json=data,
                                      headers=self.headers,
                                      proxies=self.proxies,
                                      timeout=timeout)
@@ -707,7 +707,7 @@ class ZipFiles:
         try:
             response = requests.post(self.base_url + '/zip_files',
                                      headers=self.headers,
-                                     data=json.dumps(data),
+                                     json=data,
                                      proxies=self.proxies,
                                      timeout=timeout)
 
